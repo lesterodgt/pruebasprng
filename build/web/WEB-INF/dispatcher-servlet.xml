@@ -10,9 +10,10 @@
 
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
 
-    <bean class="controller.HelloController" p:helloService-ref="helloService"/>
+    
     
     <bean class="controller.DetalleController" />
+    <bean class="controller.ProductosController"  />
     
 
     <!--

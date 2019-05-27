@@ -9,7 +9,7 @@ public class Name {
     private String value;
 
     public String getValue() {
-        return value;
+        return "abc";
     }
 
     public void setValue(String value) {

@@ -7,6 +7,7 @@ public class Producto {
     private String nombre;
     private Double precio;
     private String descripcion;
+    private int cantidad;
 
     public Producto(String idproducto, String nombre, Double precio, String descripcion) {
         this.idproducto = idproducto;
@@ -45,6 +46,14 @@ public class Producto {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
     
 }

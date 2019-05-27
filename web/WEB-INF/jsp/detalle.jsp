@@ -29,11 +29,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-2">
-                                <div id="colorlib-logo"><a href="index.html">Store</a></div>
+                                <div id="colorlib-logo"><a href="../productos/productos.htm">Store</a></div>
                             </div>
                             <div class="col-xs-10 text-right menu-1">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="../productos/productos.htm">Home</a></li>
                                     <li class="has-dropdown active">
                                         <a href="shop.html">Shop</a>
                                         <ul class="dropdown">
@@ -44,10 +44,8 @@
                                             <li><a href="add-to-wishlist.html">Wishlist</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
+                                    
+                                    <li><a href="cart.html"><i class="icon-shopping-cart"></i> Cart </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -64,7 +62,7 @@
                                     <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
                                         <div class="slider-text-inner text-center">
                                             <h1>Product Detail</h1>
-                                            <h2 class="bread"><span><a href="index.html">Home</a></span> <span><a href="shop.html">Product</a></span> <span>Product Detail</span></h2>
+                                            <h2 class="bread"><span><a href="../productos/productos.htm">Home</a></span> <span><a href="shop.html">Product</a></span> <span>Product Detail</span></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -141,7 +139,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p><a href="cart.html" class="btn btn-primary btn-addtocart"><i class="icon-shopping-cart"></i> Add to Cart</a></p>
+                                            <p><a id="enlace" href="../detalle/agregar.htm?id=${producto.idproducto}&cantidad=1" class="btn btn-primary btn-addtocart"><i class="icon-shopping-cart"></i> Add to Cart</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -449,6 +447,7 @@
             // If is not undefined
             $('#quantity').val(quantity + 1);
             // Increment
+            document.getElementById("enlace").href="../detalle/agregar.htm?id=${producto.idproducto}&cantidad="+(quantity + 1)
         });
         $('.quantity-left-minus').click(function (e) {
             // Stop acting like a button
@@ -459,6 +458,7 @@
             // Increment
             if (quantity > 0) {
                 $('#quantity').val(quantity - 1);
+                document.getElementById("enlace").href="../detalle/agregar.htm?id=${producto.idproducto}&cantidad="+(quantity - 1)
             }
         });
     });
